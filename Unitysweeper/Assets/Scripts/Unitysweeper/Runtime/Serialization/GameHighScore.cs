@@ -43,7 +43,7 @@ namespace Unitysweeper.Serialization
                 Serializer.WriteData(dataBlob, scorePath);
             }
 
-            return highScore;
+            return highScore; 
         }
 
 
