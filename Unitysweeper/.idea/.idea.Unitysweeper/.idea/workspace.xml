@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" afterDir="false" />
-    </list>
+    <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,17 +37,19 @@
     <setting file="file://$PROJECT_DIR$/../../Harvest/Little Flame/Assets/Scripts/Serialization/Serializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../AppCore_Project/AppCore_Unity/Packages/AppCore/Runtime/Directory/CoreDirectory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/UIView_GameWinCanvas.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/MonoTileInstance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/Serializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/UIView_GameWinCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/MonoTileInstance.cs" />
       </list>
     </option>
   </component>
