@@ -1,0 +1,12 @@
+/Users/michaelstephens/Development/Projects/Sharpsweeper/bin/Debug/Sharpsweeper.dll
+/Users/michaelstephens/Development/Projects/Sharpsweeper/bin/Debug/Sharpsweeper.pdb
+/Users/michaelstephens/Development/Projects/Sharpsweeper/obj/Debug/Sharpsweeper.csprojAssemblyReference.cache
+/Users/michaelstephens/Development/Projects/Sharpsweeper/obj/Debug/Sharpsweeper.csproj.CoreCompileInputs.cache
+/Users/michaelstephens/Development/Projects/Sharpsweeper/obj/Debug/Sharpsweeper.dll
+/Users/michaelstephens/Development/Projects/Sharpsweeper/obj/Debug/Sharpsweeper.pdb
+/Users/michaelstephens/Development/Projects/Unitysweeper/Sharpsweeper/bin/Debug/Sharpsweeper.dll
+/Users/michaelstephens/Development/Projects/Unitysweeper/Sharpsweeper/bin/Debug/Sharpsweeper.pdb
+/Users/michaelstephens/Development/Projects/Unitysweeper/Sharpsweeper/obj/Debug/Sharpsweeper.csprojAssemblyReference.cache
+/Users/michaelstephens/Development/Projects/Unitysweeper/Sharpsweeper/obj/Debug/Sharpsweeper.csproj.CoreCompileInputs.cache
+/Users/michaelstephens/Development/Projects/Unitysweeper/Sharpsweeper/obj/Debug/Sharpsweeper.dll
+/Users/michaelstephens/Development/Projects/Unitysweeper/Sharpsweeper/obj/Debug/Sharpsweeper.pdb
