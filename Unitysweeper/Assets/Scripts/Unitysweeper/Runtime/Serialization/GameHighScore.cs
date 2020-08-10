@@ -46,7 +46,6 @@ namespace Unitysweeper.Serialization
             return highScore;
         }
 
-
         private static bool GetIsBetterScore(GameSummaryData checkData, GameSummaryData sourceData)
         {
             return checkData.secondsElapsed < sourceData.secondsElapsed;
@@ -60,6 +59,18 @@ namespace Unitysweeper.Serialization
         public static string GetDifficultyKey(BoardDataTemplate data)
         {
             return "_" + data.displayLabel;
+        }
+
+        public static GameSummaryData GetDataForGameDifficulty(BoardDataTemplate data)
+        {
+            GameSummaryData retData = new GameSummaryData();
+            string scorePath = CONST_HighScoreDataFile + GetDifficultyKey(data) + CONST_HighScoreDataFormat;
+            string highScore = Serializer.ReadData(scorePath);
+            if (!string.IsNullOrEmpty(highScore))
+            {
+                retData = JsonUtility.FromJson<GameSummaryData>(highScore);
+            }
+            return retData;
         }
 
         #endregion Utility

@@ -20,21 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/.idea.Unitysweeper.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/Serializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/Serializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +36,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/Serializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Harvest/Little Flame/Assets/Scripts/Serialization/Serializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../AppCore_Project/AppCore_Unity/Packages/AppCore/Runtime/Directory/CoreDirectory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/UIView_GameWinCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -57,8 +49,10 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/Serializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/UIView_GameWinCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" />
       </list>
     </option>
   </component>
@@ -77,6 +71,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -124,5 +120,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="558" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1597092534991">
+      <screen x="-385" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="558" y="-1094" width="672" height="678" key="search.everywhere.popup/-385.-1417.2560.1417/0.23.1792.1097@-385.-1417.2560.1417" timestamp="1597092534991" />
   </component>
 </project>

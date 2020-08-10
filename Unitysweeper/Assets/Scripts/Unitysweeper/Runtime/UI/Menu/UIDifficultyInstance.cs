@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unitysweeper.Board;
 using Unitysweeper.Game;
+using Unitysweeper.Serialization;
 
 namespace Unitysweeper.UI.Menu
 {
@@ -32,7 +33,18 @@ namespace Unitysweeper.UI.Menu
         {
             _data = data;
             difficultyLabel.text = data.displayLabel;
-        }
+            
+            // Get high score for this option
+            int highScore = GameHighScore.GetDataForGameDifficulty(data).secondsElapsed;
+            if (highScore > 0)
+            {
+                highScoreLabel.text = "BEST: " + highScore + " seconds";
+            }
+            else
+            {
+                highScoreLabel.text = "-";
+            }
+        }  
 
         #endregion Initialization
 
