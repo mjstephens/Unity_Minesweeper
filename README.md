@@ -7,5 +7,8 @@ SHARPSWEEPER
 - Minesweeper game logic C# library
 
 UNITYSWEEPER
-- Unity implementation of SHARPSWEEPER
+- Unity implementation of SHARPSWEEPER library
+
+
+*changes made to Sharpsweeper require the dll to be re-imported into the Unity project.
 
