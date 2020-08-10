@@ -88,6 +88,13 @@ namespace Sharpsweeper.Game
 
         #region Update
 
+        // Called when the player selects or flags a tile
+        public void OnGameInput()
+        {
+            // We wait to start the game timer until the user inputs
+            time.BeginGameTimer();
+        }
+
         /// <summary>
         /// Called from client when the view needs an update on the game state
         /// </summary>
@@ -115,7 +122,6 @@ namespace Sharpsweeper.Game
             UpdateGame();
             
             state = GameState.InProgress;
-            time.BeginGameTimer();
         }
 
         void IGameSystem.GameLost()

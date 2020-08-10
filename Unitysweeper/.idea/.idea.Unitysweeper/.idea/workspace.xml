@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="" />
+    <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITile.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

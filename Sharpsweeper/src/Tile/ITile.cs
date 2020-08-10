@@ -17,14 +17,17 @@ namespace Sharpsweeper.Tile
 
         #endregion Properties
         
+        // External - called from client
         void SetAsBomb();
         
         void SetNeighbors(ITile[] neighbors);
 
         void UpdateTileView();
         
+        // External - called from client
         void TileSelected();
         
+        // External - called from client
         void TileFlagged();
 
         void ForceReveal();

@@ -119,6 +119,11 @@ namespace Sharpsweeper.Board
 
         #region Tile Selection
 
+        public void OnBoardInput()
+        {
+            _game.OnGameInput();
+        }
+
         public void BombSelected()
         {
             // All bombs should be revealed
