@@ -1,5 +1,5 @@
 # Unity_Minesweeper
-Basic minesweeper implemented in C# and Unity.
+Basic minesweeper implemented in C# and Unity 2020.1.
 
 Includes:
 
