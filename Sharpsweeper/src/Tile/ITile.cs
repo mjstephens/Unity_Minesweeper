@@ -10,6 +10,7 @@ namespace Sharpsweeper.Tile
         ITileView view { get; set; }
         Tile.TileType tileType { get; set; }
         bool isFlagged { get; }
+        bool isRevealed { get; }
         ITile[] neighbors { get; }
         Tuple<int, int> boardPosition { get; set; }
         int boardIndex { get; set; }

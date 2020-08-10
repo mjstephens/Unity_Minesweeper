@@ -1,4 +1,5 @@
 using Sharpsweeper.Tile;
+using Sharpsweeper.Tile.View;
 using TMPro;
 using UnityEngine;
 

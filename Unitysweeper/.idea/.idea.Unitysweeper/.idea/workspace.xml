@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

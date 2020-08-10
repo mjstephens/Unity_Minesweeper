@@ -1,12 +1,12 @@
 using Sharpsweeper.Game.Data;
-using Sharpsweeper.View;
+using Sharpsweeper.Game.View;
 using UnityEngine;
 using Unitysweeper.Game;
 using Unitysweeper.UI;
 
 namespace Unitysweeper.View
 {
-    public class GameView : MonoBehaviour, ISharpsweeperView
+    public class GameView : MonoBehaviour, IGameView
     {
         #region References
 
@@ -20,18 +20,18 @@ namespace Unitysweeper.View
         
         #region View
 
-        void ISharpsweeperView.GameSet(GameConfigurationData data)
+        void IGameView.GameSet(GameConfigurationData data)
         {
             (playerFlagsView as IPlayerFlagsView).SetFlagsTotal(data.totalBombs);
         }
 
-        void ISharpsweeperView.UpdateGame(GameProgressData data)
+        void IGameView.UpdateGame(GameProgressData data)
         {
             (gameTimeView as IGameTimeView).UpdateGameTime((int)data.timeElapsed.TotalSeconds);
             (playerFlagsView as IPlayerFlagsView).SetFlagsTotal(data.flagsRemaining);
         }
 
-        void ISharpsweeperView.OnGameFinished(GameSummaryData data)
+        void IGameView.OnGameFinished(GameSummaryData data)
         {
             if (data.didWin)
             {
