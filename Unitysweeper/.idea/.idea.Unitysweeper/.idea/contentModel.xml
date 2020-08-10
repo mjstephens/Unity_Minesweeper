@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Unitysweeper" t="Include">
+            <e p="Runtime" t="Include">
+              <e p="Board" t="Include">
+                <e p="BoardDataTemplate.cs" t="Include" />
+                <e p="BoardViewDataTemplate.cs" t="Include" />
+                <e p="MonoBoardInstance.cs" t="Include" />
+              </e>
+              <e p="Data" t="Include">
+                <e p="AssetManifest.cs" t="Include" />
+              </e>
+              <e p="Game" t="Include">
+                <e p="GameController.cs" t="Include" />
+                <e p="GameDataTransport.cs" t="Include" />
+                <e p="GameEndInput.cs" t="Include" />
+              </e>
+              <e p="Loading" t="Include">
+                <e p="CoreLoader.cs" t="Include" />
+              </e>
+              <e p="Serialization" t="Include">
+                <e p="GameHighScore.cs" t="Include" />
+                <e p="Serializer.cs" t="Include" />
+              </e>
+              <e p="Tile" t="Include">
+                <e p="MonoTileInstance.cs" t="Include" />
+                <e p="TileCollisionReceiver.cs" t="Include" />
+                <e p="TileSelector.cs" t="Include" />
+              </e>
+              <e p="UI" t="Include">
+                <e p="Menu" t="Include">
+                  <e p="UIDifficultyInstance.cs" t="Include" />
+                  <e p="UIDifficultyOptions.cs" t="Include" />
+                  <e p="UITitleAnimator.cs" t="Include" />
+                </e>
+                <e p="UINewGameButton.cs" t="Include" />
+                <e p="UIView_FlagCounter.cs" t="Include" />
+                <e p="UIView_GameLostCanvas.cs" t="Include" />
+                <e p="UIView_GameTime.cs" t="Include" />
+                <e p="UIView_GameWinCanvas.cs" t="Include" />
+              </e>
+              <e p="Unity.Minesweeper.asmdef" t="Include" />
+              <e p="View" t="Include">
+                <e p="GameView.cs" t="Include" />
+                <e p="IGameTimeView.cs" t="Include" />
+                <e p="IPlayerFlagsView.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Unity.Minesweeper.csproj" t="IncludeRecursive" />
+      <e p="Unitysweeper.sln" t="IncludeFlat" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_Unitysweeper.1764082047.00" t="ExcludeRecursive" />
+  </component>
+</project>

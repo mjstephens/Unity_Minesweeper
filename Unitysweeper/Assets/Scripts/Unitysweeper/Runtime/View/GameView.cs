@@ -35,7 +35,7 @@ namespace Unitysweeper.View
         {
             if (data.didWin)
             {
-                gameController.OnGameWin(data.secondsElapsed);
+                gameController.OnGameWin(data);
             }
             else
             {

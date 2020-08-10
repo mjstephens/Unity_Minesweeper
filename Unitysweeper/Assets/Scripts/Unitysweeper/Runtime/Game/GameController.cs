@@ -1,6 +1,9 @@
+using Sharpsweeper.Board.Data;
 using Sharpsweeper.Game;
+using Sharpsweeper.Game.Data;
 using UnityEngine;
 using Unitysweeper.Board;
+using Unitysweeper.Serialization;
 using Unitysweeper.UI;
 using Unitysweeper.View;
 
@@ -22,6 +25,7 @@ namespace Unitysweeper.Game
         
         private IGameSystem _gameSystem;
         public Sharpsweeper.Game.Game game { get; private set; }
+        private string _difficultyKey;
 
         #endregion Variables
 
@@ -46,6 +50,7 @@ namespace Unitysweeper.Game
 
             // 
             boardObj.ConstructView(game.board);
+            _difficultyKey = GameHighScore.GetDifficultyKey(GameDataTransport.Instance.boardData);
             
             // Move camera to center board
             gameCameraTrans.position = new Vector3(
@@ -77,9 +82,15 @@ namespace Unitysweeper.Game
             loseCanvas.GetComponent<UIView_GameLostCanvas>().SetEndGameData(secondsElapsed, bombCount);
         }
         
-        public void OnGameWin(int secondsElapsed)
+        public void OnGameWin(GameSummaryData data)
         {
-            winCanvas.GetComponent<UIView_GameWinCanvas>().SetEndGameData(secondsElapsed);
+            // Check for high score
+            if (GameHighScore.ReportGameScoreData(data, _difficultyKey))
+            {
+                Debug.Log("HIGH SCORE!");
+            }
+
+            winCanvas.GetComponent<UIView_GameWinCanvas>().SetEndGameData(data.secondsElapsed);
             OnWin();
         }
 
