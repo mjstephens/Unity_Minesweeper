@@ -10,16 +10,13 @@ namespace Unitysweeper.Tile
         #region Variables
 
         [Header("References")] 
-        public GameObject tileCover;
         public GameObject bombObj;
         public GameObject blankObj;
         public GameObject flagObj;
         public GameObject scoreObj;
         public TMP_Text labelText;
         
-        /// <summary>
-        /// The tile object that this view represents
-        /// </summary>
+        private GameObject _activeTileObj;
         public ITile tileObj { get; set; }
  
         #endregion Variables
@@ -27,24 +24,20 @@ namespace Unitysweeper.Tile
         
         #region Tile
 
-        public void SetTileStatus(Sharpsweeper.Tile.Tile.TileType status)
+        void ITileView.SetTileStatus(Sharpsweeper.Tile.Tile.TileType status)
         {
-            bombObj.SetActive(false);
-            blankObj.SetActive(false);            
-            scoreObj.SetActive(false);
-
-            //
+            _activeTileObj = null;
             switch (status)
             {
                 case Sharpsweeper.Tile.Tile.TileType.Bomb:
-                    bombObj.SetActive(true);
+                    _activeTileObj = bombObj;
                     break;
                 case Sharpsweeper.Tile.Tile.TileType.Blank:
-                    blankObj.SetActive(true);
+                    _activeTileObj = blankObj;
                     break;
                 case Sharpsweeper.Tile.Tile.TileType.Default:
                     default:
-                    scoreObj.SetActive(true);
+                    _activeTileObj = scoreObj;
                     break;
             }
         }
@@ -63,7 +56,7 @@ namespace Unitysweeper.Tile
 
         void ITileView.RevealTile()
         {
-            tileCover.SetActive(false);
+            _activeTileObj.SetActive(true);
         }
         
         void ITileView.FlagTile()

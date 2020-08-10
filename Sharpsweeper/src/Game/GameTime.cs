@@ -30,7 +30,10 @@ namespace Sharpsweeper.Game
 
         void IGameTimeSource.BeginGameTimer()
         {
-            gameElapsed.Restart();
+            if (!gameElapsed.IsRunning)
+            {
+                gameElapsed.Start();
+            }
         }
         
         void IGameTimeSource.EndGameTimer()

@@ -99,6 +99,7 @@ namespace Sharpsweeper.Tile
                 return;
             
             // Reveal the view
+            _board.OnBoardInput();
             view?.RevealTile();
             isRevealed = true;
             
@@ -128,6 +129,7 @@ namespace Sharpsweeper.Tile
                 }
             }
             
+            _board.OnBoardInput();
             isFlagged = !isFlagged;
             view?.FlagTile();
             _board.OnFlagSet(isFlagged);
