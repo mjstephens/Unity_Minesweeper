@@ -85,12 +85,8 @@ namespace Unitysweeper.Game
         public void OnGameWin(GameSummaryData data)
         {
             // Check for high score
-            if (GameHighScore.ReportGameScoreData(data, _difficultyKey))
-            {
-                Debug.Log("HIGH SCORE!");
-            }
-
-            winCanvas.GetComponent<UIView_GameWinCanvas>().SetEndGameData(data.secondsElapsed);
+            bool highScore = GameHighScore.ReportGameScoreData(data, _difficultyKey);
+            winCanvas.GetComponent<UIView_GameWinCanvas>().SetEndGameData(data.secondsElapsed, highScore);
             OnWin();
         }
 

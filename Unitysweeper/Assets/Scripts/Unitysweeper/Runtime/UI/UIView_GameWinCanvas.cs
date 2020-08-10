@@ -12,15 +12,17 @@ namespace Unitysweeper.UI
 
         [Header("References")]
         public TMP_Text timeElapsedText;
+        public GameObject highScoreObj;
 
         #endregion References
 
 
         #region Data
 
-        public void SetEndGameData(int secondsElapsed)
+        public void SetEndGameData(int secondsElapsed, bool highScore)
         {
             timeElapsedText.text = secondsElapsed.ToString("F0");
+            highScoreObj.SetActive(highScore);
         }
 
         #endregion Data
