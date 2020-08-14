@@ -8,26 +8,18 @@ namespace Sharpsweeper.Board
     /// <summary>
     /// Holds information and logic relating to the minesweeper board (grid of tiles).
     /// </summary>
-    public class Board
+    public class Board : IBoardSimulation
     {
         #region Properties
         
         /// <summary>
-        /// The data used to construct this board.
-        /// </summary>
-        public BoardData data { get; }
-        
-        /// <summary>
         /// Array of tiles this board contains
         /// </summary>
-        public ITile[,] tiles { get; }
-
-        /// <summary>
-        /// The number of flags that the player has remaining.
-        /// </summary>
+        public ITileSimulation[,] tiles { get; private set; }
+        public Tuple<int, int> boardSize { get; private set; }
         public int flagsRemaining { get; private set; }
-        
-        public int totalBombs { get; private set; }
+        public int flaggedBombs => GetNumberOfFlaggedBombs(tiles);
+        public int totalBombs { get; }
         
         /// <summary>
         /// The game instance.
@@ -45,15 +37,15 @@ namespace Sharpsweeper.Board
             int seed)
         {
             // Set data
-            data = inData;
+            boardSize = new Tuple<int, int>(inData.xSize, inData.ySize);
             _game = inGame;
             
             // Create board tiles
-            tiles = new ITile[data.xSize, data.ySize];
+            tiles = new ITileSimulation[inData.xSize, inData.ySize];
             int runningIndex = 0;
-            for (int i = 0; i < data.xSize; i++)
+            for (int i = 0; i < inData.xSize; i++)
             { 
-                for (int e = 0; e < data.ySize; e++)
+                for (int e = 0; e < inData.ySize; e++)
                 {
                     tiles[i, e] = new Tile.Tile(this)
                     {
@@ -65,11 +57,11 @@ namespace Sharpsweeper.Board
             }
             
             // Distribute bombs amongst tiles
-            totalBombs = DistributeBombs(data.bombProbability, tiles, seed);
+            totalBombs = DistributeBombs(inData.bombProbability, tiles, seed);
             flagsRemaining = totalBombs;
             
             // Assign "neighbor numbers"
-            SetNeighborNumbers(tiles, data.xSize, data.ySize);
+            SetNeighborNumbers(tiles, inData.xSize, inData.ySize);
             
             // Tiles are finished setting up
             OnBoardSetupComplete(tiles);
@@ -80,11 +72,11 @@ namespace Sharpsweeper.Board
 
         #region Setup
 
-        private static int DistributeBombs(float probability, ITile[,] tiles, int seed)
+        private static int DistributeBombs(float probability, ITileSimulation[,] tiles, int seed)
         {
             Random r = new Random(seed);
             int bombCount = 0;
-            foreach (ITile tile in tiles)
+            foreach (ITileSimulation tile in tiles)
             {
                 if (probability > r.NextDouble())
                 {
@@ -96,19 +88,19 @@ namespace Sharpsweeper.Board
         }
 
         private static void SetNeighborNumbers(
-            ITile[,] tiles,
+            ITileSimulation[,] tiles,
             int boardWidth, 
             int boardHeight)
         {
-            foreach (ITile tile in tiles)
+            foreach (ITileSimulation tile in tiles)
             {
                 tile.SetNeighbors(TileNeighborUtility.GetNeighborTiles(tile, tiles, boardWidth, boardHeight));
             }
         }
 
-        private static void OnBoardSetupComplete(ITile[,] tiles)
+        private static void OnBoardSetupComplete(ITileSimulation[,] tiles)
         {
-            foreach (ITile tile in tiles)
+            foreach (ITileSimulation tile in tiles)
             {
                 tile.UpdateTileView();
             }
@@ -119,64 +111,38 @@ namespace Sharpsweeper.Board
 
         #region Tile Selection
 
-        public void OnBoardInput()
+        void IBoardSimulation.OnTileSelected(ITileSimulation tile)
         {
+            // Bump game simulation
             _game.OnGameInput();
-        }
-
-        public void BombSelected()
-        {
-            // All bombs should be revealed
-            foreach (ITile t in tiles)
-            {
-                if (t.tileType == Tile.Tile.TileType.Bomb)
-                {
-                    t.ForceReveal();
-                }
-            }
             
-            ((IGameSystem)_game).GameLost();
-        }
-
-        public static void BlankTileSelected(ITile tile)
-        {
-            foreach (ITile t in BoardRevealer.GetAdjacentTiles(tile))
+            // What was the tile type we selected?
+            if (tile.tileType == Tile.Tile.TileType.Bomb)
             {
-                t.ForceReveal();
+                RevealAllBombs(tiles);
+                ((IGameSimulation)_game).GameLost();
+            }
+            else if (tile.tileType == Tile.Tile.TileType.Blank)
+            {
+                RevealAdjacentBlankTiles(tile);
             }
         }
-
-        #endregion Tile Selection
-
-
-        #region Flag
         
-        public int GetNumberOfFlaggedBombs()
+        void IBoardSimulation.OnTileFlagged(ITileSimulation tile)
         {
-            int flagged = 0;
-            foreach (ITile t in tiles)
-            {
-                if (t.tileType == Tile.Tile.TileType.Bomb && t.isFlagged)
-                {
-                    flagged++;
-                }
-            }
-            return flagged;
-        }
-
-        // When any tile has been flagged (true) or unflagged (false)
-        public void OnFlagSet(bool set)
-        {
-            if (set)
+            // Bump game simulation
+            _game.OnGameInput();
+            
+            if (tile.isFlagged)
             {
                 flagsRemaining--;
                 
                 // Are we out of flags? If so, check for victory
                 if (flagsRemaining == 0)
                 {
-                    if (CheckVictoryCondition())
+                    if (Game.Game.CheckVictoryConditions(this))
                     {
-                        ((IGameSystem)_game).GameWon();
+                        ((IGameSimulation)_game).GameWon();
                     }
                 }
             }
@@ -189,19 +155,41 @@ namespace Sharpsweeper.Board
             _game.currentData.flagsRemaining = flagsRemaining;
         }
 
-        // Returns true only if all bomb tiles are flagged.
-        private bool CheckVictoryCondition()
+        private static void RevealAllBombs(ITileSimulation[,] tiles)
         {
-            bool won = true;
-            foreach (ITile t in tiles)
+            foreach (ITileSimulation t in tiles)
             {
-                if (t.tileType == Tile.Tile.TileType.Bomb && !t.isFlagged)
+                if (t.tileType == Tile.Tile.TileType.Bomb)
                 {
-                    won = false;
-                    break;
+                    t.ForceReveal();
                 }
             }
-            return won;
+        }
+
+        private static void RevealAdjacentBlankTiles(ITileSimulation tile)
+        {
+            foreach (ITileSimulation t in BoardRevealer.GetAdjacentTiles(tile))
+            {
+                t.ForceReveal();
+            }
+        }
+
+        #endregion Tile Selection
+
+
+        #region Flag
+        
+        private static int GetNumberOfFlaggedBombs(ITileSimulation[,] tiles)
+        {
+            int flagged = 0;
+            foreach (ITileSimulation t in tiles)
+            {
+                if (t.tileType == Tile.Tile.TileType.Bomb && t.isFlagged)
+                {
+                    flagged++;
+                }
+            }
+            return flagged;
         }
 
         #endregion Flag

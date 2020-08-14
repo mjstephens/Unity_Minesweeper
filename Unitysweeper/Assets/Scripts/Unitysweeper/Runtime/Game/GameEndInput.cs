@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Sharpsweeper.Game;
+using UnityEngine;
 
 namespace Unitysweeper.Game
 {
@@ -22,8 +23,8 @@ namespace Unitysweeper.Game
         private void Update()
         {
             // Guard clause
-            if (gameController.game.state == Sharpsweeper.Game.Game.GameState.InProgress ||
-                gameController.game.state == Sharpsweeper.Game.Game.GameState.Waiting)
+            if (gameController.state == GameState.InProgress ||
+                gameController.state == GameState.Waiting)
                 return;
         
             // Check for end game input

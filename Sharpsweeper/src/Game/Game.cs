@@ -1,36 +1,19 @@
 using System;
+using Sharpsweeper.Board;
 using Sharpsweeper.Board.Data;
 using Sharpsweeper.Game.Data;
 using Sharpsweeper.Game.View;
 
 namespace Sharpsweeper.Game
 {
-    public class Game : IGameSystem
+    public class Game : IGameSimulation
     {
         #region Properties
 
-        public enum GameState
-        {
-            Waiting,
-            InProgress,
-            Lose,
-            Win
-        }
+        public IBoardSimulation board { get; }
         public GameState state { get; private set; }
 
-        /// <summary>
-        /// The time component
-        /// </summary>
-        public IGameTimeSource time { get; }
-
-        /// <summary>
-        /// The board for this game
-        /// </summary>
-        public Board.Board board { get; }
-
-        /// <summary>
-        /// The view to receive state information
-        /// </summary>
+        private IGameTimeSource time { get; }
         private readonly IGameView _view;
 
         #endregion Properties
@@ -38,7 +21,6 @@ namespace Sharpsweeper.Game
 
         #region Data
 
-        public GameConfigurationData configData { get; private set; }
         public GameProgressData currentData { get; private set; }
 
         #endregion Data
@@ -61,19 +43,17 @@ namespace Sharpsweeper.Game
                 boardData, 
                 this, 
                 boardSeed);
-            
-            // Setup data
-            configData = GetGameConfigurationData(boardData);
 
             // Create the game time component
             time = new GameTime(this);
             
             // Set state view
+            state = GameState.Waiting;
             _view = view;
-            _view.GameSet(configData);
+            _view.GameSet(GetGameConfigurationData(boardData, board));
         }
 
-        GameConfigurationData GetGameConfigurationData(BoardData bd)
+        private static GameConfigurationData GetGameConfigurationData(BoardData bd, IBoardSimulation board)
         {
             return new GameConfigurationData
             {
@@ -112,7 +92,7 @@ namespace Sharpsweeper.Game
 
         #region State
 
-        void IGameSystem.BeginGame()
+        void IGameSimulation.BeginGame()
         {
             //
             currentData = new GameProgressData
@@ -124,14 +104,14 @@ namespace Sharpsweeper.Game
             state = GameState.InProgress;
         }
 
-        void IGameSystem.GameLost()
+        void IGameSimulation.GameLost()
         {
             state = GameState.Lose;
             time.EndGameTimer();
             OnGameEnd(false);
         }
 
-        void IGameSystem.GameWon()
+        void IGameSimulation.GameWon()
         {
             state = GameState.Win;
             time.EndGameTimer();
@@ -143,14 +123,19 @@ namespace Sharpsweeper.Game
 
         #region End Game
 
+        public static bool CheckVictoryConditions(IBoardSimulation board)
+        {
+            return board.flaggedBombs >= board.totalBombs;
+        }
+        
         private void OnGameEnd(bool win)
         {
             GameSummaryData data = new GameSummaryData
             {
                 didWin = win,
                 secondsElapsed = (int)currentData.timeElapsed.TotalSeconds,
-                bombsFlagged = board.GetNumberOfFlaggedBombs(),
-                percentageFlagged = board.GetNumberOfFlaggedBombs() / (float)board.totalBombs
+                bombsFlagged = board.flaggedBombs,
+                percentageFlagged = board.flaggedBombs / (float)board.totalBombs
             };
             _view.OnGameFinished(data);
         }

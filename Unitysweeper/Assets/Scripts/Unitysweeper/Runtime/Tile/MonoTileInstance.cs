@@ -16,8 +16,9 @@ namespace Unitysweeper.Tile
         public GameObject scoreObj;
         public TMP_Text labelText;
         
+        // Changes based on the state/tile type
         private GameObject _activeTileObj;
-        public ITile tileObj { get; set; }
+        public ITileSimulation tileObj { get; set; }
  
         #endregion Variables
         

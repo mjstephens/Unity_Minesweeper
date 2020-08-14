@@ -4,13 +4,13 @@ namespace Sharpsweeper.Tile
     {
         #region MyRegion
 
-        public static ITile[] GetNeighborTiles(
-            ITile sourceTile, 
-            ITile[,] board,
+        public static ITileSimulation[] GetNeighborTiles(
+            ITileSimulation sourceTile, 
+            ITileSimulation[,] board,
             int boardWidth, 
             int boardHeight)
         {
-            ITile[] neighbors = new ITile[8];
+            ITileSimulation[] neighbors = new ITileSimulation[8];
             neighbors[0] = GetTileForIndex(GetNWNeighborIndex(sourceTile.boardIndex, boardHeight), board);
             neighbors[1] = GetTileForIndex(GetNNeighborIndex(sourceTile.boardIndex, boardHeight), board);
             neighbors[2] = GetTileForIndex(GetNENeighborIndex(sourceTile.boardIndex, boardWidth, boardHeight), board);
@@ -28,12 +28,12 @@ namespace Sharpsweeper.Tile
         
         #region Neighbors
 
-        private static ITile GetTileForIndex(int index, ITile[,] boardTiles)
+        private static ITileSimulation GetTileForIndex(int index, ITileSimulation[,] boardTiles)
         {
             if (index == -1)
                 return null;
 
-            ITile instance = null;
+            ITileSimulation instance = null;
             foreach (var square in boardTiles)
             {
                 if (square.boardIndex == index)

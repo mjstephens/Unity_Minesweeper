@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unitysweeper.Game;
 
 namespace Unitysweeper.Tile
 {
@@ -12,7 +11,6 @@ namespace Unitysweeper.Tile
 
         [Header("References")] 
         public Camera sceneCamera;
-        public GameController gameController;
 
         [Header("Settings")] 
         public LayerMask tileMask;
@@ -24,10 +22,6 @@ namespace Unitysweeper.Tile
 
         private void Update()
         {
-            // Guard clause
-            if (gameController.game.state != Sharpsweeper.Game.Game.GameState.InProgress)
-                return;
-            
             if (Input.GetMouseButtonDown(0))
             {
                 TileCollisionReceiver selected = RaycastToBoard(Input.mousePosition, sceneCamera, tileMask);

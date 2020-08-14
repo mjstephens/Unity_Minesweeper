@@ -61,7 +61,7 @@ namespace Unitysweeper.Serialization
             return "_" + data.displayLabel;
         }
 
-        public static GameSummaryData GetDataForGameDifficulty(BoardDataTemplate data)
+        public static GameSummaryData GetSavedHighScoreDataForGameDifficulty(BoardDataTemplate data)
         {
             GameSummaryData retData = new GameSummaryData();
             string scorePath = CONST_HighScoreDataFile + GetDifficultyKey(data) + CONST_HighScoreDataFormat;

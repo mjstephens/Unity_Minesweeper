@@ -3,7 +3,7 @@ using Sharpsweeper.Tile.View;
 
 namespace Sharpsweeper.Tile
 {
-    public interface ITile
+    public interface ITileSimulation
     {
         #region Properties
 
@@ -11,7 +11,7 @@ namespace Sharpsweeper.Tile
         Tile.TileType tileType { get; set; }
         bool isFlagged { get; }
         bool isRevealed { get; }
-        ITile[] neighbors { get; }
+        ITileSimulation[] neighbors { get; }
         Tuple<int, int> boardPosition { get; set; }
         int boardIndex { get; set; }
 
@@ -19,17 +19,12 @@ namespace Sharpsweeper.Tile
         
         // External - called from client
         void SetAsBomb();
-        
-        void SetNeighbors(ITile[] neighbors);
-
+        void SetNeighbors(ITileSimulation[] neighbors);
         void UpdateTileView();
-        
         // External - called from client
         void TileSelected();
-        
         // External - called from client
         void TileFlagged();
-
         void ForceReveal();
     }
 }

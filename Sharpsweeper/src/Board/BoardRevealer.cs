@@ -13,32 +13,32 @@ namespace Sharpsweeper.Board
         /// <summary>
         /// Keeps track of checked tiles to prevent infinite recursion.
         /// </summary>
-        private static List<ITile> checkedTiles = new List<ITile>();
+        private static List<ITileSimulation> checkedTiles = new List<ITileSimulation>();
         
         /// <summary>
         /// A running list of tiles to be revealed.
         /// </summary>
-        private static List<ITile> revealTiles = new List<ITile>();
+        private static List<ITileSimulation> revealTiles = new List<ITileSimulation>();
 
         #endregion Variables
 
 
         #region Reveal
 
-        public static List<ITile> GetAdjacentTiles(ITile sourceTile)
+        public static List<ITileSimulation> GetAdjacentTiles(ITileSimulation sourceTile)
         {
-            checkedTiles = new List<ITile>{sourceTile};
-            revealTiles = new List<ITile>{sourceTile};
+            checkedTiles = new List<ITileSimulation>{sourceTile};
+            revealTiles = new List<ITileSimulation>{sourceTile};
             CollectAdjacentBlankTiles(sourceTile);
             revealTiles = GetBorderTiles(revealTiles);
 
             return revealTiles;
         }
         
-        private static void CollectAdjacentBlankTiles(ITile sourceTile)
+        private static void CollectAdjacentBlankTiles(ITileSimulation sourceTile)
         {
             checkedTiles.Add(sourceTile);
-            foreach (ITile tile in sourceTile.neighbors)
+            foreach (ITileSimulation tile in sourceTile.neighbors)
             {
                 if (tile != null && 
                     tile.tileType == Tile.Tile.TileType.Blank)
@@ -52,12 +52,12 @@ namespace Sharpsweeper.Board
             }
         }
         
-        private static List<ITile> GetBorderTiles(List<ITile> tiles)
+        private static List<ITileSimulation> GetBorderTiles(List<ITileSimulation> tiles)
         {
-            List<ITile> borderTiles = new List<ITile>();
-            foreach (ITile tile in tiles)
+            List<ITileSimulation> borderTiles = new List<ITileSimulation>();
+            foreach (ITileSimulation tile in tiles)
             {
-                foreach (ITile n in tile.neighbors)
+                foreach (ITileSimulation n in tile.neighbors)
                 {
                     if (n != null && n.tileType != Tile.Tile.TileType.Bomb)
                     {

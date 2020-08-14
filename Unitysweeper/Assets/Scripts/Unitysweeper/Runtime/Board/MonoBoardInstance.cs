@@ -1,3 +1,4 @@
+using Sharpsweeper.Board;
 using Sharpsweeper.Tile;
 using UnityEngine;
 using Unitysweeper.Tile;
@@ -25,10 +26,10 @@ namespace Unitysweeper.Board
         /// 
         /// </summary>
         /// <param name="board"></param>
-        public void ConstructView(Sharpsweeper.Board.Board board)
+        public void ConstructView(IBoardSimulation board)
         {
             // Setup tile views
-            foreach (ITile tile in board.tiles)
+            foreach (ITileSimulation tile in board.tiles)
             {
                 ConstructBoardSquare(
                     tile.boardPosition.Item1, 
@@ -49,7 +50,7 @@ namespace Unitysweeper.Board
             int xPos, 
             int yPos, 
             float tileSpacing, 
-            ITile instanceData)
+            ITileSimulation instanceData)
         {
             Vector3 spawnPos = new Vector3(
                 xPos * tileSpacing,

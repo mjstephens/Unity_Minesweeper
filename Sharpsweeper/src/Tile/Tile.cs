@@ -1,4 +1,5 @@
 using System;
+using Sharpsweeper.Board;
 using Sharpsweeper.Tile.View;
 
 namespace Sharpsweeper.Tile
@@ -6,7 +7,7 @@ namespace Sharpsweeper.Tile
     /// <summary>
     /// Class representing an instance of a tile.
     /// </summary>
-    public class Tile : ITile
+    public class Tile : ITileSimulation
     {
         public enum TileType
         {
@@ -25,14 +26,14 @@ namespace Sharpsweeper.Tile
         /// Neighbors array organized clockwise starting from top-left tile relative to this tile
         /// index 0 = top-left, 1 = top, 2 = top-right, 3 = right, etc
         /// </summary>
-        public ITile[] neighbors { get; set; }
+        public ITileSimulation[] neighbors { get; private set; }
         public Tuple<int, int> boardPosition { get; set; }
         public int boardIndex { get; set; }
 
         /// <summary>
         /// The board to which this tile belongs.
         /// </summary>
-        private readonly Board.Board _board;
+        private readonly IBoardSimulation _board;
 
         /// <summary>
         /// "Score" refers to the number of neighbors that contaon bombs.
@@ -44,9 +45,10 @@ namespace Sharpsweeper.Tile
 
         #region Construction
 
-        public Tile(Board.Board board)
+        public Tile(IBoardSimulation board)
         {
             _board = board;
+            tileType = TileType.Default;
         }
 
         #endregion Construction
@@ -54,16 +56,16 @@ namespace Sharpsweeper.Tile
 
         #region Setup
 
-        void ITile.SetAsBomb()
+        void ITileSimulation.SetAsBomb()
         {
             tileType = TileType.Bomb;
         }
         
-        void ITile.SetNeighbors(ITile[] inNeighbors)
+        void ITileSimulation.SetNeighbors(ITileSimulation[] inNeighbors)
         {
             // Count valid neighbors
             neighbors = inNeighbors;
-            foreach (ITile tile in neighbors)
+            foreach (ITileSimulation tile in neighbors)
             {
                 if (tile != null && tile.tileType == TileType.Bomb)
                 {
@@ -78,7 +80,7 @@ namespace Sharpsweeper.Tile
             }
         }
 
-        void ITile.UpdateTileView()
+        void ITileSimulation.UpdateTileView()
         {
             view?.SetTileStatus(tileType);
             if (tileType != TileType.Bomb)
@@ -92,29 +94,19 @@ namespace Sharpsweeper.Tile
 
         #region Selection
 
-        void ITile.TileSelected()
+        void ITileSimulation.TileSelected()
         {
             // Don't reveal times that are flagged
             if (isFlagged)
                 return;
             
             // Reveal the view
-            _board.OnBoardInput();
+            _board.OnTileSelected(this);
             view?.RevealTile();
             isRevealed = true;
-            
-            // What should we do now that the tile is revealed?
-            if (tileType == TileType.Bomb)
-            {
-                _board?.BombSelected();
-            }
-            else if (_neighboringBombs <= 0)
-            {
-                Board.Board.BlankTileSelected(this);
-            }
         }
 
-        void ITile.TileFlagged()
+        void ITileSimulation.TileFlagged()
         {
             // Can't flag tiles that are already revealed
             if (isRevealed)
@@ -129,13 +121,12 @@ namespace Sharpsweeper.Tile
                 }
             }
             
-            _board.OnBoardInput();
             isFlagged = !isFlagged;
             view?.FlagTile();
-            _board.OnFlagSet(isFlagged);
+            _board.OnTileFlagged(this);
         }
 
-        void ITile.ForceReveal()
+        void ITileSimulation.ForceReveal()
         {
             isRevealed = true;
             view?.RevealTile();

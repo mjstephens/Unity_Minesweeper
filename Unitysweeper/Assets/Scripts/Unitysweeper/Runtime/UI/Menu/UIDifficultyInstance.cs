@@ -35,7 +35,7 @@ namespace Unitysweeper.UI.Menu
             difficultyLabel.text = data.displayLabel;
             
             // Get high score for this option
-            int highScore = GameHighScore.GetDataForGameDifficulty(data).secondsElapsed;
+            int highScore = GameHighScore.GetSavedHighScoreDataForGameDifficulty(data).secondsElapsed;
             if (highScore > 0)
             {
                 highScoreLabel.text = "BEST: " + highScore + " seconds";

@@ -1,4 +1,3 @@
-using Sharpsweeper.Board.Data;
 using Sharpsweeper.Game;
 using Sharpsweeper.Game.Data;
 using UnityEngine;
@@ -23,8 +22,8 @@ namespace Unitysweeper.Game
         public GameObject loseCanvas;
         public GameObject gameEndedCanvas;
         
-        private IGameSystem _gameSystem;
-        public Sharpsweeper.Game.Game game { get; private set; }
+        public GameState state => _game.state;
+        private IGameSimulation _game;
         private string _difficultyKey;
 
         #endregion Variables
@@ -38,28 +37,27 @@ namespace Unitysweeper.Game
         public void Awake()
         {
             // Create a new game
-            game = new Sharpsweeper.Game.Game(
+            _game = new Sharpsweeper.Game.Game(
                 gameView,
                 GameDataTransport.Instance.boardData.data, 
                 GameDataTransport.Instance.levelSeed);
-            _gameSystem = game;
             
             // Create board
             MonoBoardInstance boardObj = Instantiate(monoBoardObj).GetComponent<MonoBoardInstance>();
             boardObj.viewData = GameDataTransport.Instance.styleData;
 
             // 
-            boardObj.ConstructView(game.board);
+            boardObj.ConstructView(_game.board);
             _difficultyKey = GameHighScore.GetDifficultyKey(GameDataTransport.Instance.boardData);
             
             // Move camera to center board
             gameCameraTrans.position = new Vector3(
-                game.board.data.xSize / 2f,
-                game.board.data.ySize / 2f,
+                _game.board.boardSize.Item1 / 2f,
+                _game.board.boardSize.Item2 / 2f,
                 gameCameraTrans.position.z);
 
             // Start the game
-            ((IGameSystem)game).BeginGame();
+            _game.BeginGame();
         }
         
         #endregion Initialization
@@ -69,7 +67,7 @@ namespace Unitysweeper.Game
 
         private void Update()
         {
-            _gameSystem?.UpdateGame();
+            _game?.UpdateGame();
         }
 
         #endregion Update
@@ -101,11 +99,9 @@ namespace Unitysweeper.Game
         public void OnGameEndInput()
         {
             // Currently we only wait for input on a loss
-            switch (game.state)
+            if (_game.state == GameState.Lose)
             {
-                case Sharpsweeper.Game.Game.GameState.Lose:
-                    OnLose();
-                    break;
+                OnLose();
             }
         }
 
