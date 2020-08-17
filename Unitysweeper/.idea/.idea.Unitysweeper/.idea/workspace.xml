@@ -20,27 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Board/IBoardSimulation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Game/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/bin/Debug/Sharpsweeper.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/bin/Debug/Sharpsweeper.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Board/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/BoardRevealer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Board/BoardRevealer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/IGameSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Game/IGameSimulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITileSimulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/TileNeighborUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/TileNeighborUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/.idea.Sharpsweeper.dir.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/bin/Debug/Sharpsweeper.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/Board.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/BoardRevealer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/Data/BoardData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/IBoardSimulation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Data/GameConfigurationData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Data/GameProgressData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Data/GameSummaryData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Game.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/GameState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/GameTime.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/IGameSimulation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/IGameTimeSource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/View/IGameView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITileSimulation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/TileNeighborUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/View/ITileView.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Board/MonoBoardInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Board/MonoBoardInstance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameEndInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameEndInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/MonoTileInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/MonoTileInstance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/TileSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/TileSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sharpsweeper/Sharpsweeper.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sharpsweeper/Sharpsweeper.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597090181426</updated>
       <workItem from="1597090192946" duration="1719000" />
-      <workItem from="1597409825849" duration="4067000" />
+      <workItem from="1597409825849" duration="5124000" />
     </task>
     <servers />
   </component>
