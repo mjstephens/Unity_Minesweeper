@@ -20,42 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/.idea.Sharpsweeper.dir.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper.dir/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/.idea/.idea.Sharpsweeper/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/bin/Debug/Sharpsweeper.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/obj/Debug/Sharpsweeper.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/Board.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/BoardRevealer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/Data/BoardData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Board/IBoardSimulation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Data/GameConfigurationData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Data/GameProgressData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Data/GameSummaryData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/Game.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/GameState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/GameTime.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/IGameSimulation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/IGameTimeSource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Game/View/IGameView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/ITileSimulation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/Tile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/TileNeighborUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sharpsweeper/src/Tile/View/ITileView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sharpsweeper/Sharpsweeper.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sharpsweeper/Sharpsweeper.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/Serializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../AppCore_Project/AppCore_Unity/Packages/AppCore/Runtime/Directory/CoreDirectory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/47681E70-D986-4A0E-AE03-04D20761CA42/f3/1460f35f/IGameSimulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/UIView_GameWinCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/MonoTileInstance.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,12 +53,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/Serializer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/UIView_GameWinCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/UI/Menu/UIDifficultyInstance.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Serialization/GameHighScore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/MonoTileInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Board/MonoBoardInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/TileSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameEndInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" />
       </list>
     </option>
@@ -148,6 +117,7 @@
       <updated>1597090181426</updated>
       <workItem from="1597090192946" duration="1719000" />
       <workItem from="1597409825849" duration="5124000" />
+      <workItem from="1597756259497" duration="3030000" />
     </task>
     <servers />
   </component>

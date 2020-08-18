@@ -1,3 +1,5 @@
+using Sharpsweeper.Board;
+using Sharpsweeper.Board.Data;
 using Sharpsweeper.Game;
 using Sharpsweeper.Game.Data;
 using UnityEngine;
@@ -31,10 +33,7 @@ namespace Unitysweeper.Game
 
         #region Initialization
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void Awake()
+        private void Awake()
         {
             // Create a new game
             _game = new Sharpsweeper.Game.Game(
@@ -42,22 +41,25 @@ namespace Unitysweeper.Game
                 GameDataTransport.Instance.boardData.data, 
                 GameDataTransport.Instance.levelSeed);
             
-            // Create board
+            // Create the board objects
+            ConstructBoardObject(_game.board, GameDataTransport.Instance.boardData.data);
+            
+            // Start the game
+            _game.BeginGame();
+        }
+
+        private void ConstructBoardObject(IBoardSimulation board, BoardData boardData)
+        {
             MonoBoardInstance boardObj = Instantiate(monoBoardObj).GetComponent<MonoBoardInstance>();
             boardObj.viewData = GameDataTransport.Instance.styleData;
-
-            // 
-            boardObj.ConstructView(_game.board);
+            boardObj.ConstructView(board);
             _difficultyKey = GameHighScore.GetDifficultyKey(GameDataTransport.Instance.boardData);
             
             // Move camera to center board
             gameCameraTrans.position = new Vector3(
-                _game.board.boardSize.Item1 / 2f,
-                _game.board.boardSize.Item2 / 2f,
+                boardData.xSize / 2f,
+                boardData.ySize / 2f,
                 gameCameraTrans.position.z);
-
-            // Start the game
-            _game.BeginGame();
         }
         
         #endregion Initialization
