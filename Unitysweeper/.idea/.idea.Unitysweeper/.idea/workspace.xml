@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911bf40f-97a6-4762-8ff2-7f4379e39f13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unitysweeper/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sharpsweeper/Sharpsweeper.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sharpsweeper/Sharpsweeper.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +56,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Board/MonoBoardInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Tile/TileSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameEndInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/Game/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Unitysweeper/Runtime/View/GameView.cs" />
       </list>
     </option>
   </component>
@@ -117,7 +115,7 @@
       <updated>1597090181426</updated>
       <workItem from="1597090192946" duration="1719000" />
       <workItem from="1597409825849" duration="5124000" />
-      <workItem from="1597756259497" duration="3030000" />
+      <workItem from="1597756259497" duration="4255000" />
     </task>
     <servers />
   </component>
@@ -150,9 +148,9 @@
       <screen x="-385" y="-1417" width="2560" height="1417" />
     </state>
     <state x="693" y="-788" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-385.-1417.2560.1417/0.23.1792.1097@-385.-1417.2560.1417" timestamp="1597410154766" />
-    <state x="558" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1597410033572">
+    <state x="558" y="-1094" width="672" height="678" key="search.everywhere.popup" timestamp="1597760775289">
       <screen x="-385" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="558" y="-1094" width="672" height="678" key="search.everywhere.popup/-385.-1417.2560.1417/0.23.1792.1097@-385.-1417.2560.1417" timestamp="1597410033572" />
+    <state x="558" y="-1094" width="672" height="678" key="search.everywhere.popup/-385.-1417.2560.1417/0.23.1792.1097@-385.-1417.2560.1417" timestamp="1597760775289" />
   </component>
 </project>

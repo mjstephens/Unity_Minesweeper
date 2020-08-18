@@ -45,7 +45,7 @@ namespace Unitysweeper.Game
             ConstructBoardObject(_game.board, GameDataTransport.Instance.boardData.data);
             
             // Start the game
-            _game.BeginGame();
+            _game.OnClientGameBegin();
         }
 
         private void ConstructBoardObject(IBoardSimulation board, BoardData boardData)
@@ -69,7 +69,7 @@ namespace Unitysweeper.Game
 
         private void Update()
         {
-            _game?.UpdateGame();
+            _game?.OnClientGameUpdate();
         }
 
         #endregion Update

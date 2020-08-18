@@ -20,12 +20,12 @@ namespace Unitysweeper.View
         
         #region View
 
-        void IGameView.GameSet(GameConfigurationData data)
+        void IGameView.OnGameSet(GameConfigurationData data)
         {
             (playerFlagsView as IPlayerFlagsView).SetFlagsTotal(data.totalBombs);
         }
 
-        void IGameView.UpdateGame(GameProgressData data)
+        void IGameView.OnGameUpdated(GameProgressData data)
         {
             (gameTimeView as IGameTimeView).UpdateGameTime((int)data.timeElapsed.TotalSeconds);
             (playerFlagsView as IPlayerFlagsView).SetFlagsTotal(data.flagsRemaining);
