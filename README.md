@@ -2,4 +2,4 @@
 Basic minesweeper implemented in C# and Unity 2020.1.
 
 Uses SHARPSWEEPER library:
-https://github.com/mjstephens/Sharpsweeper/tree/master
+https://github.com/mjstephens/Sharpsweeper
